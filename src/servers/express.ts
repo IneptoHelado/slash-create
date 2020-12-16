@@ -63,7 +63,7 @@ class ExpressServer extends Server {
     );
   }
 
-  async listen(port = 80, host = 'localhost') {
+  async listen(port = process.env.PORT, host = 'localhost') {
     if (this.alreadyListening) return;
     this.app.listen(port, host);
   }
