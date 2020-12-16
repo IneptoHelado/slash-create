@@ -38,7 +38,7 @@ class Server {
     throw new Error(`${this.constructor.name} doesn't have a createEndpoint method.`);
   }
 
-  async listen(port = 80, host = 'localhost') {
+  async listen(port = process.env.PORT, host = 'localhost') {
     throw new Error(`${this.constructor.name} doesn't have a listen method.`);
   }
 }
